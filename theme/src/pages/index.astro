@@ -1,0 +1,72 @@
+---
+import { Container, FeatureCard} from '@littlesticks/odyssey-theme-components';
+
+import Layout from '../layouts/Page.astro';
+import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro';
+---
+
+<Layout>
+	<HomeHeroSection />
+	<Container>
+		<section class="feature-card__section">
+			<h2>خدمات</h2>
+			<p>
+اكتشفوا قوة الذكاء الاصطناعي مع خدماتنا المتطورة المصممة خصيصًا للغة التونسية العربية: نقدم لكم قوانين تونسية عامة ذكية وشاملة تغطي كل ما تحتاجونه من المالية إلى السياسة، ومن التصنيع إلى القضايا المدنية. ترقبوا خدمتنا القادمة التي ستركز على قوانين الشركات والتمويل المالي، وستساعدكم على تحقيق أهدافكم بسهولة وفعالية. لا تفوتوا فرصة الاستفادة من حلولنا القانونية الذكية والمبتكرة!
+			</p>
+			<div class="feature-card__grid">
+				<FeatureCard href="https://cltpay.aibc.tn/" title="تذاكر" imgSrc="/assets/images/home/screenshots/landing-1">
+				</FeatureCard>
+				<FeatureCard href="https://clt.aibc.tn/" title="مرشد القوانين التونسية العامة " imgSrc="/assets/images/home/screenshots/landing-2">
+				</FeatureCard>
+        <FeatureCard href="#" title="(قريباً) مرشد Entreprise - شركة مرشد" imgSrc="/assets/images/home/screenshots/landing-3">
+				</FeatureCard>
+			</div>
+		</section>
+	</Container>
+
+	<Container>
+		<section class="feature-card__section">
+			<h2>صفحات الشركة</h2>
+			<p>
+🌐 **تصفح موقعنا للحصول على أحدث المقالات والأخبار والصفقات الدولية** 🌍! 🌟 **ترقب مواعيد تطبيقها على منصتنا قريباً** 🚀. 
+
+📅 **ستكون منصتنا محدثة يومياً بالأخبار** 📰 **لتضمن بقائك على اطلاع دائم وبعيداً عن التأخر** ⏰. 
+
+🔔 **انضم إلينا الآن واستمتع بالتحديثات الفورية** 💼✨!
+			</p>
+			<div class="feature-card__grid">
+				<FeatureCard href="/company/about" title="ملخص" imgSrc="/assets/images/home/screenshots/about">
+				</FeatureCard>
+				<FeatureCard href="/company/contact" title="صفحة الاتصال" imgSrc="/assets/images/home/screenshots/contact">
+				</FeatureCard>
+				<FeatureCard href="/blog/" title="CLT المدونة" imgSrc="/assets/images/home/screenshots/blog">
+				</FeatureCard>
+
+				<FeatureCard
+					href="/company/legal"
+					imgSrc="/assets/images/home/screenshots/legal"
+					title="الصفحة القانونية"
+				>
+				</FeatureCard>
+			</div>
+		</section>
+	</Container>
+
+
+</Layout>
+
+<style>
+	.feature-card__section {
+		margin: var(--section-margin) auto;
+	}
+	.feature-card__grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--theme-grid-gap);
+	}
+	@media (max-width: 768px) {
+		.feature-card__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
